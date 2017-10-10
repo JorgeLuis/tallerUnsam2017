@@ -1,17 +1,27 @@
 <md-sidenav-container fullscreen>
-  <md-sidenav #start>
-    <md-nav-list>
-      <a md-list-item routerLink="/home">Home</a>
-      <a md-list-item routerLink="/pokemones">Pokemones</a>
-    </md-nav-list>
-    <hr>
-    <button md-button (click)="start.close()">Cerrar</button>
+  <md-sidenav #start style="background: rgba(232, 21, 6, 0.54); transform: translate3d(0px, 0px, 0px);">
+      <md-nav-list style="margin-left: 2%;">
+          <br>
+          <br>
+          <br>
+          <md-list>
+              <md-list-item>
+                  <img md-list-item routerLink="/home" src="../assets/img/pokemon-trainer.png" height="85em" alt="Logo">
+              </md-list-item><br><br>
+              <md-list-item>
+                  <img  md-list-item routerLink="/pokemones" src="../assets/img/abra.png" height="85em" alt="Logo">
+              </md-list-item>
+          </md-list>
+      </md-nav-list>
   </md-sidenav>
-  <hr>
-  <md-toolbar color="primary"  style="background:#c71919">
-    <button md-icon-button (click)="start.open()">
-      <md-icon>menu</md-icon>
-    </button>
-    <img src="../assets/img/logo.png" width="15%" alt="Logo">
+  <md-toolbar color="primary" style="background:#c71919">
+      <button md-icon-button (click)="start.open()">
+          <md-icon>menu</md-icon>
+      </button>
+      <img src="../assets/img/pokemonLogo.png" height="55em" alt="Logo">
   </md-toolbar>
+
+  <div class="main-content">
+      <router-outlet></router-outlet>
+  </div>
 </md-sidenav-container>
